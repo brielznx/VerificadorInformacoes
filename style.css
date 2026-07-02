@@ -22,6 +22,13 @@ align-items: center;
 
  }
 
+section{
+ display: flex;
+gap: 16px;
+
+}
+
+
 
 .cabecalho {
     color: white;
@@ -37,12 +44,12 @@ align-items: center;
 
 
 .cartao {
+    margin: 20px;
     width: 260px;
     height: 200px;
 
 
 }
-
 
 
 .cartao-imagem {
@@ -70,10 +77,17 @@ align-items: center;
 
 
 
-.cartao-frente,
-.cartao-verso {
+.cartao-frente, .cartao-verso {
     position: absolute;
     border-radius: 12px;
-
+    box-shadow: 0 6px 12px rgb(0,0,0, 0.15);
+    backface-visibility: hidden;
 
 }
+
+.cartao-verso {
+    transform: rotateY(180deg);
+    
+}
+
+
